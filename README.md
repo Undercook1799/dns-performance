@@ -6,7 +6,7 @@ Shell script to test the performance of DNS resolvers from your location.
 
 Modified Stuff from the [original](https://github.com/cleanbrowsing/dnsperftest):
 
-- Changed default included servers:
+- Changed default included servers to:
 
   - Cloudflare's 1.1.1.1 & 2606:4700:4700::1111
   - Quad9's 9.9.9.9 & 2620:fe::fe
