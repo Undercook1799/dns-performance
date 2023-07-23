@@ -2,22 +2,25 @@
 
 Shell script to test the performance of the most popular DNS resolvers from your location.
 
-Modified Version of the [original](https://github.com/cleanbrowsing/dnsperftest):
+# What's Changed From The Original Repository?
 
-- Cloudflare's 1.1.1.1 & 2606:4700:4700::1111
-- Quad9's 9.9.9.9 & 2620:fe::fe
-- Adguard's Default 94.140.14.14 & 2a10:50c0::ad1:ff
-- ControlD's Ad & Tracking 76.76.2.2 & 2606:1a40::2
-- Mullvad's Adblock 194.242.2.3 & 2a07:e340::3
-- DNS.SB's 185.222.222.222 & 2a09::
-- dns0.eu's 193.110.81.0 & 2a0f:fc80::
-- NextDNS's 45.90.28.0 & 2a07:a8c0::
+Modified Stuff from the [original](https://github.com/cleanbrowsing/dnsperftest):
+
+- Changed default included servers:
+  - Cloudflare's 1.1.1.1 & 2606:4700:4700::1111
+  - Quad9's 9.9.9.9 & 2620:fe::fe
+  - Adguard's Default 94.140.14.14 & 2a10:50c0::ad1:ff
+  - ControlD's Ad & Tracking 76.76.2.2 & 2606:1a40::2
+  - Mullvad's Adblock 194.242.2.3 & 2a07:e340::3
+  - DNS.SB's 185.222.222.222 & 2a09::
+  - dns0.eu's 193.110.81.0 & 2a0f:fc80::
+  - NextDNS's 45.90.28.0 & 2a07:a8c0::
 
 iOS & MacOS Profiles: [https://github.com/Undercook1799/layer7-dns-profiles](https://github.com/Undercook1799/layer7-dns-profiles)
 
 # Required
 
-You need to install bc and dig.
+You need to install bc and dig (which may or may not already be included with your distro).
 
 For Ubuntu:
 
