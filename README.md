@@ -1,12 +1,13 @@
-# DNS Performance Test
+# What is this?
 
-Shell script to test the performance of the most popular DNS resolvers from your location.
+Shell script to test the performance of DNS resolvers from your location.
 
 # What's Changed From The Original Repository?
 
 Modified Stuff from the [original](https://github.com/cleanbrowsing/dnsperftest):
 
 - Changed default included servers:
+
   - Cloudflare's 1.1.1.1 & 2606:4700:4700::1111
   - Quad9's 9.9.9.9 & 2620:fe::fe
   - Adguard's Default 94.140.14.14 & 2a10:50c0::ad1:ff
@@ -16,7 +17,9 @@ Modified Stuff from the [original](https://github.com/cleanbrowsing/dnsperftest)
   - dns0.eu's 193.110.81.0 & 2a0f:fc80::
   - NextDNS's 45.90.28.0 & 2a07:a8c0::
 
-iOS & MacOS Profiles: [https://github.com/Undercook1799/layer7-dns-profiles](https://github.com/Undercook1799/layer7-dns-profiles)
+- Changed two test servers:
+  - From the second google.com domain to duckduckgo.com
+  - From whatsapp.com to github.com
 
 # Required
 
@@ -123,3 +126,7 @@ If you receive an error `$'\r': command not found`, convert the file to a Linux-
     tr -d '\15\32' < dnstest.sh > dnstest-2.sh
 
 Then run `bash ./dnstest-2.sh`
+
+# iOS & MacOS Profiles
+
+[https://github.com/Undercook1799/layer7-dns-profiles](https://github.com/Undercook1799/layer7-dns-profiles)
