@@ -2,24 +2,22 @@
 
 Shell script to test the performance of the most popular DNS resolvers from your location.
 
-Includes by default:
- * CloudFlare 1.1.1.1
- * Level3 4.2.2.1
- * Google 8.8.8.8
- * Quad9 9.9.9.9
- * Freenom 80.80.80.80
- * OpenDNS
- * Norton
- * CleanBrowsing
- * Yandex
- * AdGuard
- * Neustar
- * Comodo
- * NextDNS
+Modified Version of the [original](https://github.com/cleanbrowsing/dnsperftest):
 
-# Required 
+- Cloudflare's 1.1.1.1 & 2606:4700:4700::1111
+- Quad9's 9.9.9.9 & 2620:fe::fe
+- Adguard's Default 94.140.14.14 & 2a10:50c0::ad1:ff
+- ControlD's Ad & Tracking 76.76.2.2 & 2606:1a40::2
+- Mullvad's Adblock 194.242.2.3 & 2a07:e340::3
+- DNS.SB's 185.222.222.222 & 2a09::
+- dns0.eu's 193.110.81.0 & 2a0f:fc80::
+- NextDNS's 45.90.28.0 & 2a07:a8c0::
 
-You need to install bc and dig. 
+iOS & MacOS Profiles: [https://github.com/Undercook1799/layer7-dns-profiles](https://github.com/Undercook1799/layer7-dns-profiles)
+
+# Required
+
+You need to install bc and dig.
 
 For Ubuntu:
 
@@ -35,11 +33,11 @@ For macOS using homebrew:
 
 # Utilization
 
-``` 
- $ git clone --depth=1 https://github.com/cleanbrowsing/dnsperftest/
+```
+ $ git clone --depth=1 https://github.com/Undercook1799/dnsperftest/
  $ cd dnsperftest
- $ bash ./dnstest.sh 
-               test1   test2   test3   test4   test5   test6   test7   test8   test9   test10  Average 
+ $ bash ./dnstest.sh
+               test1   test2   test3   test4   test5   test6   test7   test8   test9   test10  Average
 cloudflare     1 ms    1 ms    1 ms    2 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms      1.10
 google         22 ms   1 ms    4 ms    24 ms   1 ms    19 ms   3 ms    56 ms   21 ms   21 ms     17.20
 quad9          10 ms   19 ms   10 ms   10 ms   10 ms   10 ms   10 ms   10 ms   10 ms   55 ms     15.40
@@ -56,7 +54,7 @@ To sort with the fastest first, add `sort -k 22 -n` at the end of the command:
 
 ```
   $ bash ./dnstest.sh |sort -k 22 -n
-               test1   test2   test3   test4   test5   test6   test7   test8   test9   test10  Average 
+               test1   test2   test3   test4   test5   test6   test7   test8   test9   test10  Average
 cloudflare     1 ms    1 ms    1 ms    4 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms      1.30
 norton         2 ms    2 ms    2 ms    2 ms    2 ms    2 ms    2 ms    2 ms    2 ms    2 ms      2.00
 neustar        2 ms    2 ms    2 ms    2 ms    1 ms    2 ms    2 ms    2 ms    2 ms    22 ms     3.90
@@ -73,7 +71,7 @@ To test using the IPv6 addresses, add the IPv6 option:
 
 ```
   $ bash ./dnstest.sh ipv6| sort -k 22 -n
-                     test1   test2   test3   test4   test5   test6   test7   test8   test9   test10  Average 
+                     test1   test2   test3   test4   test5   test6   test7   test8   test9   test10  Average
 cleanbrowsing-v6     1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms      1.00
 cloudflare-v6        1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    5 ms    1 ms    1 ms    1 ms      1.40
 quad9-v6             1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    21 ms     3.00
@@ -86,9 +84,10 @@ yandex-v6            177 ms  178 ms  178 ms  179 ms  179 ms  178 ms  179 ms  178
 ```
 
 To test both IPv6 and IPv4, add the "all" option:
+
 ```
   $ bash ./dnstest.sh all| sort -k 22 -n
-                     test1   test2   test3   test4   test5   test6   test7   test8   test9   test10  Average 
+                     test1   test2   test3   test4   test5   test6   test7   test8   test9   test10  Average
 cleanbrowsing        1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms      1.00
 cleanbrowsing-v6     1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms      1.00
 cloudflare-v6        1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms    1 ms      1.00
@@ -114,11 +113,10 @@ yandex               178 ms  178 ms  177 ms  179 ms  178 ms  174 ms  180 ms  178
 
 ```
 
-
 # For Windows users using the Linux subsystem
 
 If you receive an error `$'\r': command not found`, convert the file to a Linux-compatible line endings using:
 
     tr -d '\15\32' < dnstest.sh > dnstest-2.sh
-    
+
 Then run `bash ./dnstest-2.sh`

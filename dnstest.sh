@@ -8,30 +8,25 @@ command -v bc > /dev/null || { echo "error: bc was not found. Please install bc.
 NAMESERVERS=`cat /etc/resolv.conf | grep ^nameserver | cut -d " " -f 2 | sed 's/\(.*\)/&#&/'`
 
 PROVIDERSV4="
-1.1.1.1#cloudflare 
-4.2.2.1#level3 
-8.8.8.8#google 
-9.9.9.9#quad9 
-80.80.80.80#freenom 
-208.67.222.123#opendns 
-199.85.126.20#norton 
-185.228.168.168#cleanbrowsing 
-77.88.8.7#yandex 
-176.103.130.132#adguard 
-156.154.70.3#neustar 
-8.26.56.26#comodo
-45.90.28.202#nextdns
+1.1.1.1#cloudflare
+9.9.9.9#quad9
+94.140.14.14#adguard-def
+76.76.2.2#controld-ad
+194.242.2.3#mullvad-ad
+185.222.222.222#dns.sb
+193.110.81.0#dns0.eu
+45.90.28.0#nextdns
 "
 
 PROVIDERSV6="
-2606:4700:4700::1111#cloudflare-v6
-2001:4860:4860::8888#google-v6
-2620:fe::fe#quad9-v6
-2620:119:35::35#opendns-v6
-2a0d:2a00:1::1#cleanbrowsing-v6
-2a02:6b8::feed:0ff#yandex-v6
-2a00:5a60::ad1:0ff#adguard-v6
-2610:a1:1018::3#neustar-v6
+2606:4700:4700::1111#cloudflare
+2620:fe::fe#quad9
+2a10:50c0::ad1:ff#adguard-def
+2606:1a40::2#controld-ad
+2a07:e340::3#mullvad-ad
+2a09::#dns.sb
+2a0f:fc80::#dns0.eu
+2a07:a8c0::#nextdns
 "
 
 # Testing for IPv6
