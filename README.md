@@ -21,6 +21,10 @@ Modified Stuff from the [original](https://github.com/cleanbrowsing/dnsperftest)
   - From the second google.com domain to duckduckgo.com
   - From whatsapp.com to github.com
 
+- Added test servers:
+  - www.cloudflare.com
+  - abc7news.com
+
 # Required
 
 You need to install bc and dig (which may or may not already be included with your distro).

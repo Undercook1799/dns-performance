@@ -59,7 +59,7 @@ fi
     
 
 # Domains to test. Duplicated domains are ok
-DOMAINS2TEST="www.google.com amazon.com facebook.com www.youtube.com www.reddit.com  wikipedia.org twitter.com gmail.com www.duckduckgo.com github.com"
+DOMAINS2TEST="www.google.com www.amazon.com www.facebook.com www.youtube.com www.reddit.com  wikipedia.org twitter.com gmail.com duckduckgo.com github.com www.cloudflare.com abc7news.com"
 
 
 totaldomains=0
